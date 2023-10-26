@@ -1,0 +1,25 @@
+import pandas as pd
+
+df = pd.read_excel("Book1.xlsx")
+print(df)
+
+print("For loop Example")
+for i in range(10):
+    print(i)
+    i +=2
+
+
+class Emp:
+    def __init__(self,name,sal):
+        self.name = name
+        self.sal = sal
+
+    def get_sal(self):
+        return self.sal
+    
+anuj = Emp("anuj","25000")
+
+print(anuj.name)
+print(anuj.sal)
+print(anuj.get_sal)
+

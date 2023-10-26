@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      table,
+      th,
+      td {
+        border: 1px solid black;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container mt-5">
+      <form
+        class="col-6 mx-auto card p-3 shawdow-lg"
+        method="post"
+        enctype="multipart/form-data"
+      >
+        {% csrf_token %}
+        <h2>Add Receipe</h2>
+        <div class="mb-3">
+          <label for="exampleInputEmail1" class="form=label">
+            Receipe name</label
+          >
+          <input type="text" name="receipe_name" class="form-control" required/>
+        </div>
+        <div class="mb-3">
+          <label for="exampleInputPassword1" class="form-label"
+            >Receipe Description</label
+          >
+          <textarea class="form-control" name="receipe_desc"></textarea>
+        </div>
+        <div class="mb-3">
+          <label for="exampleInputPassword1" class="form-label"
+            >Receipe Image</label
+          >
+          <input type="file" name="receipe_image" class="form-control" required />
+        </div>
+        <button type="submit" class="btn btn-primary">Submit</button>
+      </form>
+    </div>
+  </body>
+</html>
